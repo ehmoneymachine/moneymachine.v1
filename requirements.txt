@@ -1,9 +1,2 @@
-flask
+streamlit
 groq
-elevenlabs
-moviepy
-pillow
-pytrends
-pexels-api-py
-requests
-apscheduler
