@@ -1,0 +1,7 @@
+[server]
+headless = true
+enableXsrfProtection = false
+allowedHosts = ["moneymachinev1-production.up.railway.app", "*.up.railway.app"]
+
+[client]
+showErrorDetails = true
