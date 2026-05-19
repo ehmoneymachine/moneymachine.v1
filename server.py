@@ -88,6 +88,9 @@ HTML_TEMPLATE = """\
 """
 
 
+PORT = int(os.environ.get("PORT", 8080))
+
+
 class Handler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):
         logger.info("REQUEST %s - %s", self.address_string(), fmt % args)
@@ -116,7 +119,6 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    PORT = int(os.environ.get("PORT", 8080))
     server = HTTPServer(("0.0.0.0", PORT), Handler)
     logger.info("Listening on 0.0.0.0:%d", PORT)
     try:
